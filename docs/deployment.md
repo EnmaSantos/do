@@ -1,5 +1,17 @@
 # Deployment
 
+## Hosted web portal
+
+The interactive portal is deployed to Vercel as a native Next.js application at [opsflow-omega.vercel.app](https://opsflow-omega.vercel.app). Use a preview-first release so the exact tested artifact can be promoted to production:
+
+```bash
+vercel deploy
+vercel inspect <preview-url>
+vercel promote <preview-url>
+```
+
+Vercel project settings should keep Node.js 24 and the repository-root Next.js defaults. The portal is an ephemeral demonstration client; deploy the durable ASP.NET Core API and managed SQL Server separately, then provide the public API URL when wiring live persistence.
+
 ## Local full stack
 
 ```bash

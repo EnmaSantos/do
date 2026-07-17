@@ -2,6 +2,8 @@
 
 OpsFlow is an internal operations control center that connects IT inventory, production incident response, service ownership, reusable knowledge, and audit history. It answers three practical questions in one place:
 
+**Live portal:** [opsflow-omega.vercel.app](https://opsflow-omega.vercel.app)
+
 1. What equipment and software services do we operate?
 2. What production problems are affecting them now?
 3. How did we solve similar problems before?
@@ -53,14 +55,14 @@ The backend separates domain rules, application contracts, persistence, and HTTP
 
 ## Technology stack
 
-- Frontend: React 19, TypeScript, Vite/Vinext, Lucide icons
+- Frontend: Next.js 16, React 19, TypeScript, Lucide icons
 - Backend: C#, ASP.NET Core 10 minimal APIs
 - Persistence: EF Core 10, SQL Server, committed migration
 - Authentication: ASP.NET Core Identity, signed JWT bearer tokens
 - API documentation: Swagger/OpenAPI
 - Logging: Serilog structured console logs
 - Testing: xUnit, FluentAssertions, Moq, ASP.NET integration testing
-- Infrastructure: Docker, Docker Compose, GitHub Actions, Dependabot
+- Infrastructure: Vercel, Docker, Docker Compose, GitHub Actions, Dependabot
 
 ## Run locally
 
@@ -129,6 +131,10 @@ server/
 docs/                        Architecture, database, support, and deployment guides
 .github/                     CI, Dependabot, issue and pull-request templates
 ```
+
+## Web deployment
+
+The recruiter-facing portal runs as a native Next.js application at [opsflow-omega.vercel.app](https://opsflow-omega.vercel.app). Pull requests can use isolated preview deployments, while verified builds are promoted to production. The ASP.NET Core API and SQL Server remain separately deployable through the supplied containers.
 
 ## Connected demo story
 
