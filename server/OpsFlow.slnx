@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="OpsFlow.Domain/OpsFlow.Domain.csproj" />
+  <Project Path="OpsFlow.Application/OpsFlow.Application.csproj" />
+  <Project Path="OpsFlow.Infrastructure/OpsFlow.Infrastructure.csproj" />
+  <Project Path="OpsFlow.Api/OpsFlow.Api.csproj" />
+  <Project Path="OpsFlow.UnitTests/OpsFlow.UnitTests.csproj" />
+  <Project Path="OpsFlow.IntegrationTests/OpsFlow.IntegrationTests.csproj" />
+</Solution>
